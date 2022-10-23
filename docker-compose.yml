@@ -1,0 +1,17 @@
+version: "3.9"
+
+# We are setting up 2 services: web and 
+services:
+
+  # configure the container for the webserver
+  web:
+    # Set up the web server according to the Dockerfile inside the api/ folder
+    build: api/
+    
+    # map host port 8000 to container port 5000 (see the EXPOSE command in api/Dockerfile)
+    ports:
+      - "8001:5000"
+
+  # configure the container for redis
+  redis:
+    image: "redis:alpine"
