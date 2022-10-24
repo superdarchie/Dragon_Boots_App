@@ -1,7 +1,6 @@
 
 from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
-from PyMySQL import MySQL
 
 
 
@@ -16,7 +15,7 @@ db_pw = open('/secrets/db_password.txt').readline()
 
 @app.route("/")
 def hello_world():
-    return "<h1>Hello, From The Best Flask App!!!!!!!</h1>"
+    return "<h1>Hello, From A Flask App!!!!!!!</h1>"
 
 if __name__== "__main__":
     app.run(debug=True, host='0.0.0.0', port=4000)

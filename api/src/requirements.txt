@@ -1,4 +1,2 @@
 flask
 flask-restful
-flask-mysqldb
-pymysql
