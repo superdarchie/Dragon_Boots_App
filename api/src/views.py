@@ -14,3 +14,8 @@ def home():
 
     return jsonify(theData)
     # return ('<h1>Hello from your web app!!</h1>')
+
+
+@views.route('/test')
+def tester():
+    return "<h1>this is a test!</h1>"
