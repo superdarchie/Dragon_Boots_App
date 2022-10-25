@@ -15,7 +15,7 @@ flush privileges;
 
 -- Move into the database we just created.
 -- TODO: If you changed the name of the database above, you need to
---change it here too. 
+-- change it here too. 
 use cool_db;
 
 -- Put your DDL 

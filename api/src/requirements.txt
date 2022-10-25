@@ -1,2 +1,5 @@
 flask
 flask-restful
+flask-login
+flask-mysql
+cryptography
