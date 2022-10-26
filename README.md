@@ -6,7 +6,7 @@ This repo contains a boilerplate setup for spinning up 2 docker containers:
 
 ## For setting up a Conda Web-Dev environment:
 
-`conda create -n webdev python=3.0`
+`conda create -n webdev python=3.9`
 `conda activate webdev`
 `pip install flask`
 

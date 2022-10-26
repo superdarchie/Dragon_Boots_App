@@ -1,21 +1,15 @@
-from flask import Blueprint, request, jsonify, make_response
-import json
-import pymysql.cursors
-
-from . import db
+from flask import Blueprint
 
 views = Blueprint('views', __name__)
 
+# This is a base route
+# we simply return a string.  
 @views.route('/')
 def home():
-    cursor = db.get_db().cursor()
-    cursor.execute('select customerNumber, customerName from customers')
-    theData = cursor.fetchall()
+    return ('<h1>Hello from your web app!!</h1>')
 
-    return jsonify(theData)
-    # return ('<h1>Hello from your web app!!</h1>')
-
-
+# This is a sample route for the /test URI.  
+# as above, it just returns a simple string. 
 @views.route('/test')
 def tester():
     return "<h1>this is a test!</h1>"
