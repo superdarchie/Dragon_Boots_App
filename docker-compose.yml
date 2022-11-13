@@ -8,16 +8,16 @@ services:
   web:
     
     # Set up the web server according to the Dockerfile inside the api/ folder
-    build: api/
+    build: flask-app/
     
     # connect the src folder in on the host machine to the code folder in the container. 
     # note that the code folder in contaier is the working directory (see DockerFile).
-    volumes: ['./api:/code', './secrets:/secrets'] 
+    volumes: ['./flask-app:/code', './secrets:/secrets'] 
 
     # have the container restart if it fails for some reason. 
     restart: unless-stopped
 
-    # map host port 8000 to container port 4000 (see the EXPOSE command in api/Dockerfile)
+    # map host port 8001 to container port 4000 (see the EXPOSE command in api/Dockerfile)
     ports:
       - "8001:4000"
 
@@ -43,7 +43,11 @@ services:
 
     restart: unless-stopped
     
-    # Setting up some environment variables for secrets. 
+    # Setting up some environment variables for secrets.
+    # Here we are setting the root password
+    # as well as creating an additional user called 
+    # webapp.  webapp user password is stored in a secret 
+    # file as well. 
     environment:
       MYSQL_USER: webapp
       MYSQL_PASSWORD_FILE: /run/secrets/secret_db_pw

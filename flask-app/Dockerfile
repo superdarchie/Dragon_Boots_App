@@ -22,6 +22,5 @@ EXPOSE 4000
 
 # tell the container to run the flask application
 # CMD ["python", "src/app.py"]
-CMD ["python", "api.py"]
-# CMD["python", "./api.py"]
+CMD ["python", "app.py"]
 

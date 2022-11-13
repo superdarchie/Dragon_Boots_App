@@ -1,10 +1,11 @@
 from flask import Blueprint, request, jsonify, make_response
+import json
+from src import db
 
-
-from . import db
 
 customers = Blueprint('customers', __name__)
 
+# Get all customers from the DB
 @customers.route('/customers', methods=['GET'])
 def get_customers():
     cursor = db.get_db().cursor()
@@ -20,6 +21,7 @@ def get_customers():
     the_response.mimetype = 'application/json'
     return the_response
 
+# Get customer detail for customer with particular userID
 @customers.route('/customers/<userID>', methods=['GET'])
 def get_customer(userID):
     cursor = db.get_db().cursor()
