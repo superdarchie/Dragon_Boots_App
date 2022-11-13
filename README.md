@@ -5,7 +5,7 @@ This repo contains a boilerplate setup for spinning up 2 docker containers:
 1. A Python Flask container to implement a REST API
 
 ## How to setup and start the containers
-- **Important** - you need Docker Desktop installed
+**Important** - you need Docker Desktop installed
 
 1. Clone this repository.  
 1. Create a file named `db_root_password.txt` in the `secrets/` folder and put inside of it the root password for MySQL. 
@@ -16,9 +16,9 @@ This repo contains a boilerplate setup for spinning up 2 docker containers:
 
 ## For setting up a Conda Web-Dev environment:
 
-`conda create -n webdev python=3.9`
-`conda activate webdev`
-`pip install flask flask-mysql flask-restful cryptography flask-login`
+1. `conda create -n webdev python=3.9`
+1. `conda activate webdev`
+1. `pip install flask flask-mysql flask-restful cryptography flask-login`
 
 
 
