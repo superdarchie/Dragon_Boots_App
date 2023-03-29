@@ -55,6 +55,8 @@ services:
       - secret_db_pw
       - secret_db_root_pw
 
+  ##################################################################
+  # configure the AppSmith container (borrowed directly from Appsmith)
   appsmith:
     image: index.docker.io/appsmith/appsmith-ce
     container_name: appsmith
