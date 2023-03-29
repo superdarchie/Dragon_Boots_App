@@ -24,8 +24,6 @@ services:
     links:
       - db
 
-
-
   ##################################################################
   # configure the mysql container
   db:
@@ -57,7 +55,6 @@ services:
       - secret_db_pw
       - secret_db_root_pw
 
-
   appsmith:
     image: index.docker.io/appsmith/appsmith-ce
     container_name: appsmith
@@ -67,21 +64,6 @@ services:
     volumes:
       - ./stacks:/appsmith-stacks
     restart: unless-stopped
-    # Uncomment the lines below to enable auto-update
-    #labels:
-    #  com.centurylinklabs.watchtower.enable: "true"
-
-  #auto_update:
-  #  image: containrrr/watchtower
-  #  volumes:
-  #    - /var/run/docker.sock:/var/run/docker.sock
-  #  # Update check interval in seconds.
-  #  command: --schedule "0 0 * ? * *" --label-enable --cleanup
-  #  restart: unless-stopped
-  #  depends_on:
-  #    - appsmith
-  #  environment:
-  #    - WATCHTOWER_LIFECYCLE_HOOKS=true
 
 secrets:
   secret_db_pw:
