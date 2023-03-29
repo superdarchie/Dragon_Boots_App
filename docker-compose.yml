@@ -9,7 +9,7 @@ services:
     
     # Set up the web server according to the Dockerfile inside the api/ folder
     build: flask-app/
-    
+    container_name: web
     # connect the src folder in on the host machine to the code folder in the container. 
     # note that the code folder in contaier is the working directory (see DockerFile).
     volumes: ['./flask-app:/code', './secrets:/secrets'] 
@@ -31,7 +31,7 @@ services:
   db:
     # We are using the base image of MySQL v.8
     image: mysql:8
-
+    container_name: db
     volumes:
       # anything in (or mounted in) /docker-entrypoint-initdb.d in the container 
       # will automatically be executed when the container is created
@@ -56,6 +56,32 @@ services:
     secrets:
       - secret_db_pw
       - secret_db_root_pw
+
+
+  appsmith:
+    image: index.docker.io/appsmith/appsmith-ce
+    container_name: appsmith
+    ports:
+      - "8080:80"
+      - "4443:443"
+    volumes:
+      - ./stacks:/appsmith-stacks
+    restart: unless-stopped
+    # Uncomment the lines below to enable auto-update
+    #labels:
+    #  com.centurylinklabs.watchtower.enable: "true"
+
+  #auto_update:
+  #  image: containrrr/watchtower
+  #  volumes:
+  #    - /var/run/docker.sock:/var/run/docker.sock
+  #  # Update check interval in seconds.
+  #  command: --schedule "0 0 * ? * *" --label-enable --cleanup
+  #  restart: unless-stopped
+  #  depends_on:
+  #    - appsmith
+  #  environment:
+  #    - WATCHTOWER_LIFECYCLE_HOOKS=true
 
 secrets:
   secret_db_pw:
