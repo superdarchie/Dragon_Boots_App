@@ -12,7 +12,7 @@ def get_products():
     cursor = db.get_db().cursor()
 
     # use cursor to query the database for a list of products
-    cursor.execute('select productCode, productName, productVendor from products')
+    cursor.execute('SELECT id, product_code, product_name, list_price FROM products')
 
     # grab the column headers from the returned data
     column_headers = [x[0] for x in cursor.description]
@@ -32,15 +32,14 @@ def get_products():
     return jsonify(json_data)
 
 # get the top 5 products from the database
-@products.route('/top5products')
+@products.route('/mostExpensive')
 def get_most_pop_products():
     cursor = db.get_db().cursor()
     query = '''
-        SELECT p.productCode, productName, sum(quantityOrdered) as totalOrders
-        FROM products p JOIN orderdetails od on p.productCode = od.productCode
-        GROUP BY p.productCode, productName
-        ORDER BY totalOrders DESC
-        LIMIT 5;
+        SELECT product_code, product_name, list_price, reorder_level
+        FROM products
+        ORDER BY list_price DESC
+        LIMIT 5
     '''
     cursor.execute(query)
        # grab the column headers from the returned data
