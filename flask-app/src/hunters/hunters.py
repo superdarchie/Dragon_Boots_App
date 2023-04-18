@@ -37,11 +37,11 @@ def delete_hunter():
     the_data = request.json
     h_hunterID = the_data['h_id']
     cursor = db.get_db().cursor()
+    db.get_db().commit()
     try:
         cursor.execute('delete from Hunters where h_id = hunter_ID')
     except:
         return "ERROR: THERES NO HUNTER TO DELETE!"
-    db.get_db().commit()
     return "Hunter deleated!"
 
 @hunters.route('/hunterInfo', methods =['GET'])
