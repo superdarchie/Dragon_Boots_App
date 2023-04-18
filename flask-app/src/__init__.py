@@ -28,7 +28,6 @@ def create_app():
     @app.route("/")
     def welcome():
         return "<h1>Welcome to the Magical Store</h1>"
-        return "<h1>Welcome to JB Incorporated's mythical lands...</h1>" 
 
     # Import the various routes
     from src.views import views
