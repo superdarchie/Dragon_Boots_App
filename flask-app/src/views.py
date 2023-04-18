@@ -14,6 +14,6 @@ def home():
 
 # This is a sample route for the /test URI.  
 # as above, it just returns a simple string. 
-@views.route('/test')
-def tester():
-    return "<h1>this is a test!</h1>"
+# @views.route('/test')
+# def tester():
+#     return "<h1>this is a test!</h1>"
