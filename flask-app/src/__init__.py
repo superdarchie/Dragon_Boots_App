@@ -32,12 +32,14 @@ def create_app():
     # Import the various routes
     from src.views import views
     from src.wizards.wizards import wizards
-    from src.products.products  import products
-    from src.hunter.hunter import hunter
+
+    from src.hunters.hunters import hunters
 
     # Register the routes that we just imported so they can be properly handled
     app.register_blueprint(views,       url_prefix='/v')
     app.register_blueprint(wizards,   url_prefix='/w')
-    app.register_blueprint(products,    url_prefix='/p')
+    app.register_blueprint(hunters, url_prefix ='/h')
+
+
 
     return app
