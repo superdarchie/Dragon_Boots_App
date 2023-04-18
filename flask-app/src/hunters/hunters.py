@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, make_response
+from flask import Blueprint, request, jsonify, make_response, current_app
 import json
 from src import db
 
@@ -9,6 +9,7 @@ hunters = Blueprint('hunters', __name__)
 def add_new_hunter(id_number):
     #gets data  from json
     the_data = request.json
+    cursor = db.get_db().cursor()
     #extra data -> go to app smith to get the name of the variables
     #Hunters Table Info
     h_hp = the_data['h_hp']
@@ -20,17 +21,15 @@ def add_new_hunter(id_number):
     the_Hunters_query = "insert into Hunters (id_number, hp, damage, speed, defense) "
     the_Hunters_query += "values ('" + id_number +  "','" + h_hp +  "', '" + h_damage + "', " + h_speed + ", '" + h_defense + "')"
 
+    current_app.loger.info(the_Hunters_query)
     #pushes info to terminal in docker when "shit" happens 
     try:
-        current_app.loger.info(the_Hunters_query)
+        cursor.exectue(the_Hunters_query)
+         #execute the query
+        db.get_db().commit()
     except:
         return "ERROR! HUNTER COULD NOT BE ADDED"
      
-
-    #execute the query
-    cursoer = db.get_db().cursor
-    cursor.exectue(insert_stmt)
-    db.get_db().commit()
     return "Success!"
 
 @hunters.route('/deleteHunter', methods=['DELETE'])
