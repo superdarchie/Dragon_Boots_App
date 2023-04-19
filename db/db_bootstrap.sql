@@ -9,11 +9,11 @@ USE jbINC_db;
 
 CREATE TABLE Common_Attributes (
     id_number INTEGER PRIMARY KEY AUTO_INCREMENT,
-    crystal_ball_number varchar(15) UNIQUE,
+    crystal_ball_number varchar(25) UNIQUE,
     age INTEGER,
     pay decimal,
     realm varchar(50) NOT NULL,
-    username varchar(20) NOT NULL,
+    username varchar(30) NOT NULL,
     start_date DATETIME DEFAULT current_timestamp
 );
 
@@ -113,7 +113,7 @@ CREATE TABLE Boots (
     forge_id INTEGER,
     materials varchar(50) NOT NULL,
     name varchar(100) NOT NULL,
-    size varchar(1),
+    size varchar(3),
     galactic_port_id INTEGER,
     realm varchar(50),
     enchantment_1 varchar(50),
