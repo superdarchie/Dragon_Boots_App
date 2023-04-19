@@ -1164,20 +1164,20 @@ INSERT INTO Dragons(name,age,hp,size,weakness,damage_type,location) VALUES ('Lui
 INSERT INTO Dragons(name,age,hp,size,weakness,damage_type,location) VALUES ('Duffie',10,87,'M','wind','ice','China');
 
 
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (1,1,'Jsandye',4138,'a','Reactive non-volatile functionalities','11/13/2022');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (2,2,'Inger',7186,'a','Re-contextualized dedicated service-desk','3/13/2023');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (3,3,'Rosemaria',7438,'c','Customizable high-level software','2/24/2023');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (4,NULL,'Malinde',2339,'c','Vision-oriented secondary structure','1/13/2023');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (5,NULL,'Levin',5563,'sss','Cross-group maximized instruction set','11/20/2022');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (6,5,'Windy',7159,'b','Programmable scalable implementation','1/5/2023');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (7,7,'Payton',863,'s','Optimized zero defect function','12/26/2022');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (8,7,'Jacklyn',5638,'b','Multi-layered responsive Graphical User Interface','8/29/2022');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (9,7,'Feodor',6148,'ss','Extended encompassing secured line','10/10/2022');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (10,8,'Ignacius',6480,'c','Re-engineered composite ability','2/13/2023');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (11,4,'Morty',1952,'d','Optional 5th generation moratorium','6/10/2022');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (12,3,'Alain',6104,'ss','Customer-focused incremental toolset','8/26/2022');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (13,2,'Essa',9140,'b','Cloned systematic framework','10/2/2022');
-INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (14,10,'Kirsti',5745,'c','Versatile real-time ability','9/6/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (1,1,'Lusa',4138,'a','Reactive non-volatile functionalities','11/13/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (2,2,'Caryl',7186,'a','Re-contextualized dedicated service-desk','3/13/2023');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (3,3,'Emory',7438,'c','Customizable high-level software','2/24/2023');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (4,NULL,'Sarah',2339,'c','Vision-oriented secondary structure','1/13/2023');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (5,NULL,'Kermie',5563,'sss','Cross-group maximized instruction set','11/20/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (6,5,'Kendricks',7159,'b','Programmable scalable implementation','1/5/2023');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (7,7,'Wolgang',863,'s','Optimized zero defect function','12/26/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (8,7,'Paige',5638,'b','Multi-layered responsive Graphical User Interface','8/29/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (9,7,'Dayle',6148,'ss','Extended encompassing secured line','10/10/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (10,8,'Vern',6480,'c','Re-engineered composite ability','2/13/2023');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (11,4,'Truman',1952,'d','Optional 5th generation moratorium','6/10/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (12,3,'Bonny',6104,'ss','Customer-focused incremental toolset','8/26/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (13,2,'Ettore',9140,'b','Cloned systematic framework','10/2/2022');
+INSERT INTO Quests(quest_id,s_id,dragon_name,reward,difficulty,description,completion_date) VALUES (14,10,'Dannie',5745,'c','Versatile real-time ability','9/6/2022');
 
 
 INSERT INTO Forge(forge_id,magical_fuel,realm) VALUES (1,48941,'Brazil');
