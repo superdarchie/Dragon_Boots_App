@@ -1,11 +1,11 @@
-DROP DATABASE IF EXISTS jb_inc_db;
+DROP DATABASE IF EXISTS jbINC_db;
 
-CREATE DATABASE jb_inc_db;
+CREATE DATABASE jbINC_db;
 
-grant all privileges on jb_inc_db.* to 'webapp'@'%';
+grant all privileges on jbINC_db.* to 'webapp'@'%';
 flush privileges;
 
-USE jb_inc_db;
+USE jbINC_db;
 
 CREATE TABLE Common_Attributes (
     id_number INTEGER PRIMARY KEY AUTO_INCREMENT,
