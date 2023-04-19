@@ -21,8 +21,8 @@ CREATE TABLE Shop (
     galactic_port_id INTEGER,
     realm VARCHAR(50),
     description VARCHAR(200) NOT NULL,
-    open_time TIME NOT NULL,
-    close_time TIME NOT NULL,
+    open_time VARCHAR(100) NOT NULL,
+    close_time VARCHAR(100) NOT NULL,
     PRIMARY KEY (galactic_port_id, realm)
 );
 
@@ -61,7 +61,7 @@ CREATE TABLE Quests (
     reward INTEGER NOT NULL,
     difficulty VARCHAR(3) NOT NULL,
     description VARCHAR(200) NOT NULL,
-    completion_date DATETIME NOT NULL,
+    completion_date VARCHAR(15) NOT NULL,
     FOREIGN KEY (s_id) REFERENCES Shopkeeper(s_id) ON UPDATE CASCADE,
     FOREIGN KEY (dragon_name) REFERENCES Dragons(name) ON UPDATE CASCADE
 );
@@ -74,7 +74,7 @@ CREATE TABLE Hunters (
     speed tinyint NOT NULL,
     defense tinyint NOT NULL,
     quest_id INTEGER,
-    quest_date DATETIME,
+    quest_date VARCHAR(15),
     FOREIGN KEY (id_number) REFERENCES Common_Attributes(id_number) ON DELETE RESTRICT,
     FOREIGN KEY (quest_id) REFERENCES Quests(quest_id) ON UPDATE CASCADE
 );
