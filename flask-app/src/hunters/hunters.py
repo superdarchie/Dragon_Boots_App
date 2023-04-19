@@ -104,7 +104,7 @@ def get_dragon_info():
     cursor = db.get_db().cursor()
     # use cursor to query the database for a list of products
     try:
-        cursor.execute('SELECT * FROM Dragons WHERE name = h_dragonName ')
+        cursor.execute(f'SELECT * FROM Dragons WHERE name = {str(h_dragonName)} ')
     except:
         return "EROR: No Dragon Found WITH NAME!!"
     # grab the column headers from the returned data
