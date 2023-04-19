@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify, make_response, current_app
-import json
+import json, flask
 from src import db
 
 hunters = Blueprint('hunters', __name__)
