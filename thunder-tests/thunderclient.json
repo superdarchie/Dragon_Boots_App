@@ -182,16 +182,16 @@
     "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
     "containerId": "",
     "name": "addHunter - test1",
-    "url": "localhost:8001/h/addHunter/5",
+    "url": "localhost:8001/h/addHunter",
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-04-19T17:46:09.414Z",
-    "modified": "2023-04-19T18:22:23.006Z",
+    "modified": "2023-04-19T20:35:33.561Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"h_hp\":10,\n  \"h_damage\": 5,\n  \"h_speed\": 2,\n  \"h_defense\":10\n}",
+      "raw": "{\n  \"h_id\": 15,\n  \"id_numb\":100,\n  \"h_hp\":10,\n  \"h_damage\": 5,\n  \"h_speed\": 2,\n  \"h_defense\":10\n}",
       "form": []
     },
     "tests": []
