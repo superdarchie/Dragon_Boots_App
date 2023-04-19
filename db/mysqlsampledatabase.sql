@@ -4272,18 +4272,18 @@ INSERT INTO Potions(potion_id,ingredients,time_to_make,damage_bonus,protection_t
 INSERT INTO Potions(potion_id,ingredients,time_to_make,damage_bonus,protection_type,duration,galactic_port_id,realm,stock_quantity) VALUES (14,'Apiaceae',68.06,89,74,617.93,10,'North Korea',275.21);
 INSERT INTO Potions(potion_id,ingredients,time_to_make,damage_bonus,protection_type,duration,galactic_port_id,realm,stock_quantity) VALUES (15,'Orchidaceae',347.34,52,134,999.93,53,'New Zealand',499.78);
 
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (1,664,619,11744);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (2,192,7704,18576);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (3,616,2028,57762);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (3,871,475,27744);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (4,26,6619,19986);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (4,150,4349,29289);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (8,646,2868,64152);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (8,663,3380,46693);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (2,753,5820,13101);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (9,986,29,81828);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (10,481,4767,5468);
-INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (10,634,5063,74702);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (1,1,619,11744);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (2,2,7704,18576);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (3,3,2028,57762);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (3,4,475,27744);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (4,5,6619,19986);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (4,6,4349,29289);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (8,7,2868,64152);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (8,8,3380,46693);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (2,9,5820,13101);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (9,10,29,81828);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (10,11,4767,5468);
+INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (10,12,5063,74702);
 
 
 
