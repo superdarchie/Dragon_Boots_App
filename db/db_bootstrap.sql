@@ -177,7 +177,7 @@ CREATE TABLE Orders (
 );
 
 CREATE TABLE Potion_Orders (
-    order_id INTEGER,
+    order_number INTEGER,
     potion_id INTEGER,
     quantity INTEGER NOT NULL,
     unit_price DECIMAL NOT NULL,
