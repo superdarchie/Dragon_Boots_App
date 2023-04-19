@@ -29,7 +29,7 @@ CREATE TABLE Shop (
 CREATE TABLE Shopkeeper (
     s_id INTEGER AUTO_INCREMENT, 
     id_number INTEGER NOT NULL,
-    favor tinyint NOT NULL,  # 0 - 255
+    favor tinyint NOT NULL,
     galactic_port_id INTEGER,
     realm VARCHAR(50),
     PRIMARY KEY (s_id),
@@ -113,7 +113,7 @@ CREATE TABLE Boots (
     forge_id INTEGER,
     materials varchar(50) NOT NULL,
     name varchar(100) NOT NULL,
-    size varchar(1),    # way to cap FK
+    size varchar(1),
     galactic_port_id INTEGER,
     realm varchar(50),
     enchantment_1 varchar(50),
