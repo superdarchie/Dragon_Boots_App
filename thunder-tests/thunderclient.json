@@ -162,5 +162,284 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "24086f4a-ae58-4b41-9726-f299cc859345",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "Test getHunterInfo",
+    "url": "localhost:8001/h/hunterInfo",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-19T17:46:09.412Z",
+    "modified": "2023-04-19T17:46:09.412Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "96fe009b-2ca5-480d-9ecd-a8f8a0c607f4",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "addHunter - test1",
+    "url": "localhost:8001/h/addHunter/1",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-04-19T17:46:09.414Z",
+    "modified": "2023-04-19T17:46:09.414Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"h_hp\":10,\n  \"h_damage\": 5,\n  \"h_speed\": 2,\n  \"h_defense\":10\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "065c93c9-3770-4f2f-9952-1dc4fd97e1f8",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "addHunter - test2",
+    "url": "localhost:8001/h/addHunter/2",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2023-04-19T17:46:09.415Z",
+    "modified": "2023-04-19T17:46:09.415Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"h_hp\":50,\n  \"h_damage\": 10,\n  \"h_speed\": 5,\n  \"h_defense\":24\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "14c83987-3b51-4608-8a46-8ee15089bcc5",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "addHunterWrongID",
+    "url": "localhost:8001/h/addHunter/5000000",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2023-04-19T17:46:09.416Z",
+    "modified": "2023-04-19T17:46:09.416Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"h_hp\":10,\n  \"h_damage\": 5,\n  \"h_speed\": 2,\n  \"h_defense\":10\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "078295ab-75a2-4d08-b060-6f80ba312565",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "deleteHunter - test1",
+    "url": "localhost:8001/h/deleteHunter",
+    "method": "DELETE",
+    "sortNum": 60000,
+    "created": "2023-04-19T17:46:09.417Z",
+    "modified": "2023-04-19T17:46:09.417Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"h_id\":1\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0858f80c-813c-4305-a375-1f9d395fc44b",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "deleteHunter - test 2",
+    "url": "localhost:8001/h/deleteHunter",
+    "method": "DELETE",
+    "sortNum": 62500,
+    "created": "2023-04-19T17:46:09.418Z",
+    "modified": "2023-04-19T17:46:09.418Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"h_id\":2\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "6c20d1f2-8a9d-43a7-8296-296e51c382b4",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "deleteHunter - WrongID",
+    "url": "localhost:8001/h/deleteHunter",
+    "method": "DELETE",
+    "sortNum": 65000,
+    "created": "2023-04-19T17:46:09.419Z",
+    "modified": "2023-04-19T17:46:09.419Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"h_id\":5000\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "28966381-ae81-40fc-8215-d748f9fd8a22",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "hunterUpdate",
+    "url": "localhost:8001/h/hunterUpdate/1",
+    "method": "PUT",
+    "sortNum": 67500,
+    "created": "2023-04-19T17:46:09.420Z",
+    "modified": "2023-04-19T17:46:09.420Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"hp\":10,\n  \"damage\": 5,\n  \"speed\": 2,\n  \"defense\":10\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "ec5aa582-cb70-4c7b-b85a-6ba173f0a4f0",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "hunterUpdate - NonExistent Hunter",
+    "url": "localhost:8001/h/hunterUpdate/5000",
+    "method": "PUT",
+    "sortNum": 68750,
+    "created": "2023-04-19T17:46:09.421Z",
+    "modified": "2023-04-19T17:46:09.421Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"hp\":10,\n  \"damage\": 5,\n  \"speed\": 2,\n  \"defense\":10\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "33a2278c-10be-4da0-b67d-c7727fcb5702",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "hunterInfo",
+    "url": "localhost:8001/h/hunterInfo",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2023-04-19T17:46:09.422Z",
+    "modified": "2023-04-19T17:46:09.422Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "78cb4dc4-3264-4923-9c77-2c2e987a837e",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "allDragonsNames",
+    "url": "localhost:8001/h/allDragonsNames",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2023-04-19T17:46:09.423Z",
+    "modified": "2023-04-19T17:46:09.423Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e3763da3-6dab-4d5a-b5c7-adbba0dbfcba",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "dragonInfo - Getting Larrys Info",
+    "url": "localhost:8001/h/dragonInfo",
+    "method": "GET",
+    "sortNum": 100000,
+    "created": "2023-04-19T17:46:09.424Z",
+    "modified": "2023-04-19T17:46:09.424Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"Larry\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "4b7d9d91-aa14-4595-be27-4bd8719fa631",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "dragonInfo - Getting Smaugs Info",
+    "url": "localhost:8001/h/dragonInfo",
+    "method": "GET",
+    "sortNum": 110000,
+    "created": "2023-04-19T17:46:09.425Z",
+    "modified": "2023-04-19T17:46:09.425Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"Smaug\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "df98b31f-84f4-4fa4-a57e-2cb03964e852",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "dragonInfo - Getting NonExistent Dragon",
+    "url": "localhost:8001/h/dragonInfo",
+    "method": "GET",
+    "sortNum": 120000,
+    "created": "2023-04-19T17:46:09.426Z",
+    "modified": "2023-04-19T17:46:09.426Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"aCrazyNameThatDNE\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cc2882a7-b2f4-4def-a7fb-5d417ca54a32",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "requestingQuests",
+    "url": "localhost:8001/h/quests",
+    "method": "GET",
+    "sortNum": 140000,
+    "created": "2023-04-19T17:46:09.427Z",
+    "modified": "2023-04-19T17:46:09.427Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "356748cc-9956-4e6e-b765-7fc4e8a95f3a",
+    "colId": "19116f72-18e8-4fb6-b88e-8264860ece44",
+    "containerId": "",
+    "name": "requestingTools",
+    "url": "localhost:8001/h/tools",
+    "method": "GET",
+    "sortNum": 150000,
+    "created": "2023-04-19T17:46:09.428Z",
+    "modified": "2023-04-19T17:46:09.428Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
