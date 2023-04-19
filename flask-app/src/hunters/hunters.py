@@ -38,6 +38,24 @@ def delete_hunter():
     the_data = request.json
     h_hunterID = the_data['h_id']
     cursor = db.get_db().cursor()
+    
+    #Checking to see if hunter exists
+    query = f"Select * FROM Hunters where h_id = {h_hunterID}"
+    cursor.execute(query)
+    json_data = []
+    # fetch all the data from the cursor
+    theData = cursor.fetchall()
+    column_headers = [x[0] for x in cursor.description]
+    # for each of the rows, zip the data elements together with
+    # the column headers. 
+    for row in theData:
+        json_data.append(dict(zip(column_headers, row)))
+    
+    #checks to see if any data was appended -> if no data was appended return statment stating you cannot delete what is not already present
+    if(json_data == []):
+        return f'Hunter With {h_hunterID} DNE - CANNOT BE DELETED'
+
+
     try:
         cursor.execute(f'delete from Hunters where h_id = {h_hunterID}')
         db.get_db().commit()
@@ -106,7 +124,7 @@ def get_dragon_info():
     try:
         cursor.execute(f'SELECT * FROM Dragons WHERE name = "{h_dragonName}" ')
     except:
-        return "EROR: No Dragon Found WITH NAME!!"
+        return "ERROR: No Dragon Found WITH NAME!!"
     # grab the column headers from the returned data
     column_headers = [x[0] for x in cursor.description]
 
@@ -122,6 +140,8 @@ def get_dragon_info():
     for row in theData:
         json_data.append(dict(zip(column_headers, row)))
     
+    if json_data == []:
+        return f'Dragon {h_dragonName} not found'
     return jsonify(json_data)
 
 @hunters.route('/hunterUpdate/<hunterID>', methods=['PUT'])
