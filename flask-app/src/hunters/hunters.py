@@ -4,28 +4,30 @@ from src import db
 
 hunters = Blueprint('hunters', __name__)
 
-#Returns the list of hunter and what quest they are on
-@hunters.route('/addHunter/<id_number>', methods=['POST'])
-def add_new_hunter(id_number):
+
+@hunters.route('/addHunter', methods=['POST'])
+def add_new_hunter():
     #gets data  from json
     the_data = request.json
     current_app.logger.info(the_data)
     #extra data -> go to app smith to get the name of the variables
     #Hunters Table Info
-    h_hp = the_data['h_hp']
-    h_damage = the_data['h_damage']
-    h_speed = the_data['h_speed']
-    h_defense = the_data['h_defense']
-
-
-    the_Hunters_query = "insert into Hunters (id_number, hp, damage, speed, defense) "
-    the_Hunters_query += "values ('" + str(id_number) +  "','" + str(h_hp) +  "', '" + str(h_damage) + "', " + str(h_speed) + ", '" + str(h_defense) + "')"
-    the_Hunters_query += f"Where id_number = {str(id_number)}"
-    current_app.logger.info(the_Hunters_query)
-    #pushes info to terminal in docker when "shit" happens 
     try:
+        h_id = the_data['h_id']
+        h_id_number = the_data['id_numb']  # encapsulate in try/catch
+        h_hp = the_data['h_hp']
+        h_damage = the_data['h_damage']
+        h_speed = the_data['h_speed']
+        h_defense = the_data['h_defense']
+
+
+        query = "insert into Hunters (h_id, id_number, hp, damage, speed, defense) values "
+        query += f'({h_id},{h_id_number}, {h_hp}, {h_damage},{h_speed},{h_defense})'
+        current_app.logger.info(query)
+        #pushes info to terminal in docker when "shit" happens 
+    
         cursor = db.get_db().cursor()
-        cursor.exectue(the_Hunters_query)
+        cursor.exectue(query)
          #execute the query
         db.get_db().commit()
     except:
