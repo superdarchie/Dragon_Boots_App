@@ -9,28 +9,29 @@ wizards = Blueprint('wizards', __name__)
 def add_new_wizard():
     the_data = request.json
     current_app.logger.info(the_data)
+    try:
+        w_id = the_data['id_numb']  # encapsulate in try/catch
+        w_name = the_data['name']
+        w_crystal = the_data['crystal_ball_number']
+        w_gold = the_data['gold_vault_number']
 
-    w_id = the_data['id_numb']  # encapsulate in try/catch
-    w_name = the_data['name']
-    w_crystal = the_data['crystal_ball_number']
-    # w_address = the_data['address']
-    # w_realm = the_data['realm']
-    w_gold = the_data['gold_vault_number']
+        query = "insert into Wizards (id_numb, name, crystal_ball_number, gold_vault_number) values "
+        query += f'({w_id}, "{w_name}", "{w_crystal}", "{w_gold}")'
+        current_app.logger.info(query)
 
-    query = "insert into Wizards (id_numb, name, crystal_ball_number, gold_vault_number) values "
-    query += f'({w_id}, "{w_name}", "{w_crystal}", "{w_gold}")'
-    current_app.logger.info(query)
-
-    cursor = db.get_db().cursor()
-    cursor.execute(query)
-    db.get_db().commit()
+        cursor = db.get_db().cursor()
+        cursor.execute(query)
+        db.get_db().commit()
+    except:
+        return "Unable to create the new wizard."
+    return "Succesfully created the new wizard."
+    
 
 # Get all wizards from the DB
 @wizards.route('/wizards', methods=['GET'])
 def get_customers():
     cursor = db.get_db().cursor()
-    cursor.execute('select id_numb, name, crystall_ball_number,\
-        address, realm, gold_vault_number from Wizards')
+    cursor.execute('select * from Wizards')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -39,14 +40,13 @@ def get_customers():
     the_response = make_response(jsonify(json_data))
     the_response.status_code = 200
     the_response.mimetype = 'application/json'
-    return the_response  # appsmith may expect this, can check later
+    return the_response  
 
 # Get customer detail for wizard with particular userID
 @wizards.route('/wizards/<userID>', methods=['GET'])
-def get_customer(userID):
+def get_wizard(userID):
     cursor = db.get_db().cursor()
-    cursor.execute(f'select * from Wizards where id = {userID}')
-    # cursor.execute('select * from customers where id = {0}'.format(userID))
+    cursor.execute(f'select * from Wizards where id_numb = {userID}')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -58,7 +58,7 @@ def get_customer(userID):
     return the_response
 
 @wizards.route('/wizards/<userID>', methods=['DELETE'])
-def delete_customer(userID):
+def delete_wizard(userID):
     cursor = db.get_db().cursor()
     try:
         cursor.execute(f'delete from Wizards where id_numb = {userID}')
@@ -79,10 +79,10 @@ def update_wizard(userID):
 
     try:
         cursor.execute(query)
+        db.get_db().commit()
     except:
         return "Unable to update the supplied wizard."
     
-    db.get_db().commit()
     return 'Wizard successfully updated in the db'
 
 @wizards.route('/orders/<userID>', methods=['GET'])
@@ -116,7 +116,7 @@ def get_boots():
     the_response.mimetype = 'application/json'
     return the_response
     
-@wizards.route('/orders/<userID>', methods=['POST'])
+@wizards.route('/orders', methods=['POST'])
 def add_new_boot_order():
     the_data = request.json
     current_app.logger.info(the_data)
@@ -137,3 +137,4 @@ def add_new_boot_order():
         db.get_db().commit()
     except:
         return "Unable to process the boot order."
+    return "Successfully added the boot order"
