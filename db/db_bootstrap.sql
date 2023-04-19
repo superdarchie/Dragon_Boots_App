@@ -111,7 +111,7 @@ CREATE TABLE Tools (
 CREATE TABLE Boots (
     boot_id INTEGER,
     forge_id INTEGER,
-    material varchar(50) NOT NULL,
+    materials varchar(50) NOT NULL,
     name varchar(100) NOT NULL,
     size varchar(1),    # way to cap FK
     galactic_port_id INTEGER,

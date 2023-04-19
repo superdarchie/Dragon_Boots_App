@@ -1,3 +1,5 @@
+USE jbINC_db;
+
 INSERT INTO Boots(boot_id,forge_id,materials,name,size,galactic_port_id,realm,enchantment_1,enchantment_2,enchantment_3) VALUES (1,148,'Orange','Publicité','3XL',7,'Belarus','24/7',NULL,NULL);
 INSERT INTO Boots(boot_id,forge_id,materials,name,size,galactic_port_id,realm,enchantment_1,enchantment_2,enchantment_3) VALUES (2,314,'Aquamarine','Lyséa','M',99,'Philippines','Front-line','orchestration',NULL);
 INSERT INTO Boots(boot_id,forge_id,materials,name,size,galactic_port_id,realm,enchantment_1,enchantment_2,enchantment_3) VALUES (3,994,'Pink','Maïly','XS',61,'China','support','Expanded',NULL);
