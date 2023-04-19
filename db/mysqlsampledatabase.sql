@@ -3217,7 +3217,7 @@ INSERT INTO Orders(order_number,wizard_id,address,realm,gold_vault_number,s_id) 
 INSERT INTO Orders(order_number,wizard_id,address,realm,gold_vault_number,s_id) VALUES (9,39,'645 Express Junction','Vietnam','5588607241709022',4);
 INSERT INTO Orders(order_number,wizard_id,address,realm,gold_vault_number,s_id) VALUES (10,538,'927 Meadow Vale Park','Tunisia','4041371970120',4);
 INSERT INTO Orders(order_number,wizard_id,address,realm,gold_vault_number,s_id) VALUES (11,512,'84288 School Junction','Ukraine','5371514854639648',7);
-INSERT INTO Orders(order_number,wizard_id,address,realm,gold_vault_number,s_id) VALUES (12,844,'6994 Village Plaza','Brazil','56022479595539075',NULL);
+INSERT INTO Orders(order_number,wizard_id,address,realm,gold_vault_number,s_id) VALUES (12,613,'6994 Village Plaza','Brazil','56022479595539075',NULL);
 
 
 
