@@ -73,8 +73,8 @@ CREATE TABLE Hunters (
     damage smallint NOT NULL,
     speed smallint NOT NULL,
     defense smallint NOT NULL,
-    quest_id INTEGER,
-    quest_date VARCHAR(15),
+    quest_id INTEGER DEFAULT NULL,
+    quest_date VARCHAR(15) DEFAULT NULL,
     FOREIGN KEY (id_number) REFERENCES Common_Attributes(id_number) ON DELETE RESTRICT,
     FOREIGN KEY (quest_id) REFERENCES Quests(quest_id) ON UPDATE CASCADE
 );

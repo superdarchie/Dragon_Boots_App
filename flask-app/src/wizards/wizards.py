@@ -132,9 +132,9 @@ def add_new_boot_order():
     current_app.logger.info(query)
 
     cursor = db.get_db().cursor()
-    try:
-        cursor.execute(query)
-        db.get_db().commit()
-    except:
-        return "Unable to process the boot order."
+    # try:
+    cursor.execute(query)
+    db.get_db().commit()
+    # except:
+    # return "Unable to process the boot order."
     return "Successfully added the boot order"
