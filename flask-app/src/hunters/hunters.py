@@ -10,8 +10,6 @@ def add_new_hunter():
     #gets data  from json
     the_data = request.json
     current_app.logger.info(the_data)
-    #extra data -> go to app smith to get the name of the variables
-    #Hunters Table Info
     try:
         h_id = the_data['h_id']
         h_id_number = the_data['id_numb']  # encapsulate in try/catch
@@ -25,13 +23,13 @@ def add_new_hunter():
         query += f'({h_id},{h_id_number}, {h_hp}, {h_damage},{h_speed},{h_defense})'
         current_app.logger.info(query)
         #pushes info to terminal in docker when "shit" happens 
-    
+
         cursor = db.get_db().cursor()
-        cursor.exectue(query)
-         #execute the query
+        cursor.execute(query)
+        #execute the query
         db.get_db().commit()
     except:
-        return "ERROR! HUNTER COULD NOT BE ADDED"
+        return "ERROR! HUNTER COULD NOT BE ADDED! HUNTER MAY ALREADY BE ADDED"
      
     return "Success!"
 
@@ -41,10 +39,10 @@ def delete_hunter():
     h_hunterID = the_data['h_id']
     cursor = db.get_db().cursor()
     try:
-        cursor.execute(f'delete from Hunters where h_id = {str(h_hunterID)}')
+        cursor.execute(f'delete from Hunters where h_id = {h_hunterID}')
         db.get_db().commit()
     except:
-        return "ERROR: THERES NO HUNTER TO DELETE!"
+        return "ERROR: YOU CANNOT DELETE THIS HUNTER! TO IMPORTANT"
     return "Hunter deleated!"
 
 @hunters.route('/hunterInfo', methods =['GET'])
@@ -106,7 +104,7 @@ def get_dragon_info():
     cursor = db.get_db().cursor()
     # use cursor to query the database for a list of products
     try:
-        cursor.execute(f'SELECT * FROM Dragons WHERE name = {str(h_dragonName)} ')
+        cursor.execute(f'SELECT * FROM Dragons WHERE name = "{h_dragonName}" ')
     except:
         return "EROR: No Dragon Found WITH NAME!!"
     # grab the column headers from the returned data
@@ -129,15 +127,19 @@ def get_dragon_info():
 @hunters.route('/hunterUpdate/<hunterID>', methods=['PUT'])
 def updateStats(hunterID):
     the_data = request.json 
+    current_app.logger.info(the_data)
+    cursor = db.get_db().cursor()
+
     hp = the_data['hp']
     defense = the_data['defense']
     damage = the_data['damage']
     speed = the_data['speed']
     
     query = f'update Hunters set hp = {hp}, defense ={defense}, damage = {damage}, speed ={speed} WHERE h_id = {hunterID} '
-    cursor = db.get_db().cursor()
+    
     try:
         cursor.execute(query)
+        db.get_db().commit()
     except:
         return "EROR: UNABLE TO UPDATE HUNTER"
    
