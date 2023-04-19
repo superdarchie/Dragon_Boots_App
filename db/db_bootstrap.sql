@@ -27,7 +27,7 @@ CREATE TABLE Shop (
 );
 
 CREATE TABLE Shopkeeper (
-    s_id INTEGER AUTO_INCREMENT,
+    s_id INTEGER AUTO_INCREMENT, 
     id_number INTEGER NOT NULL,
     favor tinyint NOT NULL,  # 0 - 255
     galactic_port_id INTEGER,
@@ -177,7 +177,7 @@ CREATE TABLE Orders (
 );
 
 CREATE TABLE Potion_Orders (
-    order_number INTEGER,
+    order_id INTEGER,
     potion_id INTEGER,
     quantity INTEGER NOT NULL,
     unit_price DECIMAL NOT NULL,
