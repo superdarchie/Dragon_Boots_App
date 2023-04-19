@@ -9,21 +9,22 @@ hunters = Blueprint('hunters', __name__)
 def add_new_hunter(id_number):
     #gets data  from json
     the_data = request.json
-    cursor = db.get_db().cursor()
+    current_app.logger.info(the_data)
     #extra data -> go to app smith to get the name of the variables
     #Hunters Table Info
     h_hp = the_data['h_hp']
     h_damage = the_data['h_damage']
-    h_speed = the_data['speed']
-    h_defense = the_data['defense']
+    h_speed = the_data['h_speed']
+    h_defense = the_data['h_defense']
 
 
     the_Hunters_query = "insert into Hunters (id_number, hp, damage, speed, defense) "
-    the_Hunters_query += "values ('" + id_number +  "','" + h_hp +  "', '" + h_damage + "', " + h_speed + ", '" + h_defense + "')"
-
+    the_Hunters_query += "values ('" + str(id_number) +  "','" + str(h_hp) +  "', '" + str(h_damage) + "', " + str(h_speed) + ", '" + str(h_defense) + "')"
+    the_Hunters_query += f"Where id_number = {str(id_number)}"
     current_app.loger.info(the_Hunters_query)
     #pushes info to terminal in docker when "shit" happens 
     try:
+        cursor = db.get_db().cursor()
         cursor.exectue(the_Hunters_query)
          #execute the query
         db.get_db().commit()
@@ -37,9 +38,9 @@ def delete_hunter():
     the_data = request.json
     h_hunterID = the_data['h_id']
     cursor = db.get_db().cursor()
-    db.get_db().commit()
     try:
-        cursor.execute('delete from Hunters where h_id = hunter_ID')
+        cursor.execute(f'delete from Hunters where h_id = {str(h_hunterID)}')
+        db.get_db().commit()
     except:
         return "ERROR: THERES NO HUNTER TO DELETE!"
     return "Hunter deleated!"
@@ -69,7 +70,7 @@ def get_hunter_info():
     
     return jsonify(json_data)
 
-@hunters.route('/AllDragonsNames', methods=['GET'])
+@hunters.route('/allDragonsNames', methods=['GET'])
 def get_all_dragon_name():
     cursor = db.get_db().cursor()
    
@@ -77,7 +78,7 @@ def get_all_dragon_name():
     try:
         cursor.execute('SELECT name FROM Dragons')
     except:
-        return "ERROR! DRAGON DNE"
+        return "ERROR! DRAGONS DNE"
     # grab the column headers from the returned data
     column_headers = [x[0] for x in cursor.description]
 
@@ -95,7 +96,7 @@ def get_all_dragon_name():
     
     return jsonify(json_data)
 
-@hunters.route('/DragonInfo', methods=['GET'])
+@hunters.route('/dragonInfo', methods=['GET'])
 def get_dragon_info():
     the_data = request.json #different from theDATA -> this is what the user gives to find the dragons info in the DB
     h_dragonName = the_data['name']
@@ -123,15 +124,15 @@ def get_dragon_info():
     
     return jsonify(json_data)
 
-@hunters.route('/hunter/<hunterID>', methods=['PUT'])
+@hunters.route('/hunterUpdate/<hunterID>', methods=['PUT'])
 def updateStats(hunterID):
     the_data = request.json 
     hp = the_data['hp']
     defense = the_data['defense']
-    attack = the_data['attack']
+    damage = the_data['damage']
     speed = the_data['speed']
     
-    query = f'update Hunters set hp = {hp}, defense ={defense}, attack = {attack}, speed ={speed} WHERE h_id = {hunterID} '
+    query = f'update Hunters set hp = {hp}, defense ={defense}, damage = {damage}, speed ={speed} WHERE h_id = {hunterID} '
     cursor = db.get_db().cursor()
     try:
         cursor.execute(query)
