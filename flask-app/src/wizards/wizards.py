@@ -29,8 +29,7 @@ def add_new_wizard():
 @wizards.route('/wizards', methods=['GET'])
 def get_customers():
     cursor = db.get_db().cursor()
-    cursor.execute('select id_numb, name, crystall_ball_number,\
-        address, realm, gold_vault_number from Wizards')
+    cursor.execute('select * from Wizards')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -45,7 +44,7 @@ def get_customers():
 @wizards.route('/wizards/<userID>', methods=['GET'])
 def get_customer(userID):
     cursor = db.get_db().cursor()
-    cursor.execute(f'select * from Wizards where id = {userID}')
+    cursor.execute(f'select * from Wizards where id_numb = {userID}')
     # cursor.execute('select * from customers where id = {0}'.format(userID))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
