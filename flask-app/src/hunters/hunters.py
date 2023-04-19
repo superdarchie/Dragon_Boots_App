@@ -21,7 +21,7 @@ def add_new_hunter(id_number):
     the_Hunters_query = "insert into Hunters (id_number, hp, damage, speed, defense) "
     the_Hunters_query += "values ('" + str(id_number) +  "','" + str(h_hp) +  "', '" + str(h_damage) + "', " + str(h_speed) + ", '" + str(h_defense) + "')"
     the_Hunters_query += f"Where id_number = {str(id_number)}"
-    current_app.loger.info(the_Hunters_query)
+    current_app.logger.info(the_Hunters_query)
     #pushes info to terminal in docker when "shit" happens 
     try:
         cursor = db.get_db().cursor()
