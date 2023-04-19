@@ -3221,16 +3221,16 @@ INSERT INTO Orders(order_number,wizard_id,address,realm,gold_vault_number,s_id) 
 
 
 
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (236,1,148,731,17930);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (553,2,314,711,19304);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (103,3,994,29,63697);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (1000,4,919,689,33111);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (450,5,460,108,16012);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (382,6,400,93,62100);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (115,7,333,704,62166);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (831,8,240,803,28005);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (348,9,744,768,96693);
-INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (332,10,450,429,38975);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (1,1,148,731,17930);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (2,2,314,711,19304);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (3,3,994,29,63697);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (4,4,919,689,33111);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (4,5,460,108,16012);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (5,6,400,93,62100);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (5,7,333,704,62166);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (10,8,240,803,28005);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (12,9,744,768,96693);
+INSERT INTO Boot_Orders(order_number,boot_id,forge_id,quantity,unit_price) VALUES (12,10,450,429,38975);
 
 
 INSERT INTO Cobblers(c_id,id_number,title,iq,task,forge_id) VALUES (1,459,'VP Quality Control',160,'Grison',230);
