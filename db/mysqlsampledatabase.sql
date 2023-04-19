@@ -4313,4 +4313,4 @@ INSERT INTO Tools(t_id,h_id,c_id,name,type,material) VALUES (9,8,NULL,'Bitchip',
 INSERT INTO Tools(t_id,h_id,c_id,name,type,material) VALUES (10,8,NULL,'Gembucket','Lamborghini','Purple');
 INSERT INTO Tools(t_id,h_id,c_id,name,type,material) VALUES (11,9,NULL,'Asoka','Mitsubishi','Violet');
 INSERT INTO Tools(t_id,h_id,c_id,name,type,material) VALUES (12,NULL,NULL,'Tresom','Nissan','Red');
-INSERT INTO Tools(t_id,h_id,c_id,name,type,material) VALUES (13,495,NULL,'Tampflex','Mercury','Orange');
+INSERT INTO Tools(t_id,h_id,c_id,name,type,material) VALUES (13,5,NULL,'Tampflex','Mercury','Orange');
