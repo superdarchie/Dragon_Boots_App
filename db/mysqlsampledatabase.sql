@@ -4287,16 +4287,16 @@ INSERT INTO Potion_Orders(order_number,potion_id,quantity,unit_price) VALUES (10
 
 
 
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (822,'Oldsmobile','Lark',3,8606);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (71,'Nissan','Elia',61,2921);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (75,'Land Rover','Willdon',6,7153);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (454,'Nissan','Janina',59,9320);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (497,'Ford','Ethel',95,7134);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (564,'Nissan','Elia',41,9730);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (669,'BMW','Miriam',27,5695);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (294,'Dodge','Ciel',51,6087);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (422,'Subaru','Essa',27,8437);
-INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (372,'Chevrolet','Susie',88,7174);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (1,'Oldsmobile','Lark',3,8606);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (2,'Nissan','Elia',61,2921);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (3,'Land Rover','Willdon',6,7153);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (4,'Nissan','Janina',59,9320);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (5,'Ford','Ethel',95,7134);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (6,'Nissan','Elia',41,9730);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (7,'BMW','Miriam',27,5695);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (8,'Dodge','Ciel',51,6087);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (9,'Subaru','Essa',27,8437);
+INSERT INTO Scale_Orders(order_number,type,dragon_name,quantity,unit_price) VALUES (10,'Chevrolet','Susie',88,7174);
 
 
 
