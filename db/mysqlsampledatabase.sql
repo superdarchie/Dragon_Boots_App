@@ -2194,15 +2194,15 @@ INSERT INTO Boots(boot_id,forge_id,materials,name,size,galactic_port_id,realm,en
 INSERT INTO Boots(boot_id,forge_id,materials,name,size,galactic_port_id,realm,enchantment_1,enchantment_2,enchantment_3) VALUES (10,450,'Puce','Gaëlle','XL',60,'United States','transitional','challenge',NULL);
 
 
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Chevrolet','Imelda',65,62,120,'Red',993,56,'Poland',173,233);
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Acura','Ernest',217,88,246,'Aquamarine',138,53,'New Zealand',4,96);
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Jeep','Camilla',38,176,156,'Purple',631,26,'Russia',241,248);
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Mazda','Inger',250,203,83,'Turquoise',649,9,'China',193,111);
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Pontiac','Darline',78,215,132,'Pink',827,12,'Ireland',176,95);
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Porsche','Antons',106,154,115,'Indigo',916,59,'China',59,29);
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Jeep','Annadiana',138,153,6,'Violet',199,98,'Indonesia',163,214);
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Ford','Ethel',155,250,225,'Green',783,4,'Poland',36,128);
-INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Audi','Dionis',155,102,226,'Aquamarine',126,89,'Dominican Republic',11,163);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Chevrolet','Wolfgang',65,62,120,'Red',993,56,'Poland',173,233);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Acura','Tyrone',217,88,246,'Aquamarine',138,53,'New Zealand',4,96);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Jeep','Paige',38,176,156,'Purple',631,26,'Russia',241,248);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Mazda','Marina',250,203,83,'Turquoise',649,9,'China',193,111);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Pontiac','Oralle',78,215,132,'Pink',827,12,'Ireland',176,95);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Porsche','Arin',106,154,115,'Indigo',916,59,'China',59,29);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Jeep','Wheeler',138,153,6,'Violet',199,98,'Indonesia',163,214);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Ford','Teodore',155,250,225,'Green',783,4,'Poland',36,128);
+INSERT INTO Scales(type,dragon_name,damage_bonus,durability,protection_type,color,forge_id,galactic_port_id,realm,stock_quantity,forge_quantity) VALUES ('Audi','Caryl',155,102,226,'Aquamarine',126,89,'Dominican Republic',11,163);
 
 INSERT INTO Wizards(id_numb,name,crystal_ball_number,address,realm,gold_vault_number) VALUES (1,'Miof mela','600-910-6850','2263 Merrick Terrace','Russia','3583372600071510');
 INSERT INTO Wizards(id_numb,name,crystal_ball_number,address,realm,gold_vault_number) VALUES (2,'June','261-291-0016','71374 Carey Way','Sweden','201601625836962');
