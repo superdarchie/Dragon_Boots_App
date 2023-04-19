@@ -11,7 +11,7 @@ def add_new_wizard():
     current_app.logger.info(the_data)
     try:
         w_id = the_data['id_numb']  # encapsulate in try/catch
-        w_name = the_data['name']
+        w_name = the_data['w_name']
         w_crystal = the_data['crystal_ball_number']
         w_gold = the_data['gold_vault_number']
 

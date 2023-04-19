@@ -4238,8 +4238,7 @@ INSERT INTO Cobblers(c_id,id_number,title,iq,task,forge_id) VALUES (1000,819,'De
 
 
 
-
-INSERT INTO Hunters(h_id,id_number,hp,damage,speed,defense,quest_id,quest_date) VALUES (1,564,73,33,178,3,1,'9/29/2022');
+INSERT INTO Hunters(h_id,id_number,hp,damage,speed,defense,quest_id,quest_date) VALUES (1,564,73,33,178,3,1,'11/13/2022');
 INSERT INTO Hunters(h_id,id_number,hp,damage,speed,defense,quest_id,quest_date) VALUES (2,373,35,216,14,243,2,'4/27/2022');
 INSERT INTO Hunters(h_id,id_number,hp,damage,speed,defense,quest_id,quest_date) VALUES (3,39,232,53,183,186,3,'4/14/2023');
 INSERT INTO Hunters(h_id,id_number,hp,damage,speed,defense,quest_id,quest_date) VALUES (4,868,221,114,219,28,4,'5/9/2022');
