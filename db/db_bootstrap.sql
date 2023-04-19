@@ -161,7 +161,7 @@ CREATE TABLE Wizards (
     crystal_ball_number VARCHAR(50) UNIQUE,
     address VARCHAR(50),
     realm VARCHAR(50),
-    gold_vault_number INTEGER UNIQUE
+    gold_vault_number BIGINT UNIQUE
 );
 
 CREATE TABLE Orders (
@@ -169,7 +169,7 @@ CREATE TABLE Orders (
     wizard_id INTEGER,
     address VARCHAR(50) NOT NULL,
     realm VARCHAR(50) NOT NULL,
-    gold_vault_number INTEGER NOT NULL,
+    gold_vault_number BIGINT NOT NULL,
     s_id INTEGER,
     PRIMARY KEY(order_number, wizard_id),
     FOREIGN KEY(wizard_id) REFERENCES Wizards(id_numb) ON UPDATE CASCADE,
