@@ -99,7 +99,7 @@ def get_all_dragon_name():
 @hunters.route('/dragonInfo', methods=['GET'])
 def get_dragon_info():
     the_data = request.json #different from theDATA -> this is what the user gives to find the dragons info in the DB
-    h_dragonName = the_data['name']
+    h_dragonName = the_data['d_name']
     
     cursor = db.get_db().cursor()
     # use cursor to query the database for a list of products
