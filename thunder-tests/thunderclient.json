@@ -20,9 +20,9 @@
     "name": "TestGetWizards",
     "url": "localhost:8001/w/wizards",
     "method": "GET",
-    "sortNum": 20000,
+    "sortNum": 45000,
     "created": "2023-04-19T13:24:43.735Z",
-    "modified": "2023-04-19T13:24:43.735Z",
+    "modified": "2023-04-20T23:40:50.502Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -476,6 +476,72 @@
     "body": {
       "type": "json",
       "raw": "{\r\n  \"order_number\": 2,\r\n  \"boot_id\": 10,\r\n  \"forge_id\": 450,\r\n  \"quantity\": 1,\r\n  \"unit_price\": 110042 \r\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f4810b22-a8dd-4a37-a086-6f144df5626d",
+    "colId": "ddaf55dd-422c-43f5-9afd-dccc3363cff4",
+    "containerId": "",
+    "name": "TestAddBootOrder2",
+    "url": "localhost:8001/w/orders",
+    "method": "POST",
+    "sortNum": 170000,
+    "created": "2023-04-20T23:19:52.364Z",
+    "modified": "2023-04-20T23:23:43.315Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n  \"order_number\": 11,\r\n  \"boot_id\": 3,\r\n  \"forge_id\": 994,\r\n  \"quantity\": 5,\r\n  \"unit_price\": 780.99 \r\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "965c59ed-4e45-4d58-b774-88d9a044cba4",
+    "colId": "ddaf55dd-422c-43f5-9afd-dccc3363cff4",
+    "containerId": "",
+    "name": "TestGetBootOrders",
+    "url": "localhost:8001/w/bootOrders",
+    "method": "GET",
+    "sortNum": 155000,
+    "created": "2023-04-20T23:27:01.738Z",
+    "modified": "2023-04-20T23:27:36.663Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e73bc21e-f989-49c0-88f4-e815b0368c63",
+    "colId": "ddaf55dd-422c-43f5-9afd-dccc3363cff4",
+    "containerId": "",
+    "name": "TestWizardOrders2",
+    "url": "localhost:8001/w/orders/10000",
+    "method": "GET",
+    "sortNum": 140000,
+    "created": "2023-04-20T23:29:26.340Z",
+    "modified": "2023-04-20T23:29:47.406Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6d64f790-e8e0-4d52-9a43-9a1d67ddcc36",
+    "colId": "ddaf55dd-422c-43f5-9afd-dccc3363cff4",
+    "containerId": "",
+    "name": "TestUpdateWizard2",
+    "url": "localhost:8001/w/wizards/145",
+    "method": "PUT",
+    "sortNum": 115000,
+    "created": "2023-04-20T23:34:50.451Z",
+    "modified": "2023-04-20T23:36:04.808Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"address\": \"Meloon\",\n  \"realm\": \"Greenland\"\n}",
       "form": []
     },
     "tests": []
