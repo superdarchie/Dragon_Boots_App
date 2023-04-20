@@ -36,7 +36,7 @@ def add_new_hunter():
 @hunters.route('/deleteHunter', methods=['DELETE'])
 def delete_hunter():
     the_data = request.json
-    h_hunterID = the_data['h_id']
+    h_hunterID = the_data['h_deleted_id']
     cursor = db.get_db().cursor()
     
     #Checking to see if hunter exists
