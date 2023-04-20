@@ -134,21 +134,21 @@ def get_boot_orders():
 def add_new_boot_order():
     the_data = request.json
     current_app.logger.info(the_data)
+    try:
+        o_order = the_data['order_number']
+        o_boot = the_data['boot_id']
+        o_forge = the_data['forge_id']
+        o_quant = the_data['quantity']
+        o_price = the_data['unit_price']
 
-    o_order = the_data['order_number']
-    o_boot = the_data['boot_id']
-    o_forge = the_data['forge_id']
-    o_quant = the_data['quantity']
-    o_price = the_data['unit_price']
+        query = "insert into Boot_Orders values "
+        query += f'({o_order}, {o_boot}, {o_forge}, {o_quant}, {o_price})'
+        current_app.logger.info(query)
 
-    query = "insert into Boot_Orders values "
-    query += f'({o_order}, {o_boot}, {o_forge}, {o_quant}, {o_price})'
-    current_app.logger.info(query)
-
-    cursor = db.get_db().cursor()
-    # try:
-    cursor.execute(query)
-    db.get_db().commit()
-    # except:
-    # return "Unable to process the boot order."
-    return "Successfully added the boot order"
+        cursor = db.get_db().cursor()
+    
+        cursor.execute(query)
+        db.get_db().commit()
+    except:
+        return "Unable to process the boot order."
+    return "Successfully added the boot order."
