@@ -116,10 +116,10 @@ def get_boots():
     the_response.mimetype = 'application/json'
     return the_response
 
-@wizards.route('/orders', methods=['GET'])
-def get_orders():
+@wizards.route('/bootOrders', methods=['GET'])
+def get_boot_orders():
     cursor = db.get_db().cursor()
-    cursor.execute(f'select * from Orders')
+    cursor.execute(f'select * from Boot_Orders')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
