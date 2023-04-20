@@ -460,5 +460,24 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "188bd606-7557-4c50-af5e-e2d356e8ccad",
+    "colId": "ddaf55dd-422c-43f5-9afd-dccc3363cff4",
+    "containerId": "",
+    "name": "TestAddBootOrder",
+    "url": "localhost:8001/w/orders",
+    "method": "POST",
+    "sortNum": 160000,
+    "created": "2023-04-20T21:32:01.244Z",
+    "modified": "2023-04-20T21:33:55.675Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n  \"order_number\": 2,\r\n  \"boot_id\": 10,\r\n  \"forge_id\": 450,\r\n  \"quantity\": 1,\r\n  \"unit_price\": 110042 \r\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
