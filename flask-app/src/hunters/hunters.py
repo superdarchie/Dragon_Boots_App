@@ -11,7 +11,7 @@ def add_new_hunter():
     the_data = request.json
     current_app.logger.info(the_data)
     try:
-        h_id = the_data['h_id']
+        h_id = the_data['h_id2']
         h_id_number = the_data['id_numb']  # encapsulate in try/catch
         h_hp = the_data['h_hp']
         h_damage = the_data['h_damage']
