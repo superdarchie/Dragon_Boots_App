@@ -158,12 +158,12 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-04-19T17:46:09.414Z",
-    "modified": "2023-04-19T21:36:24.584Z",
+    "modified": "2023-04-20T20:32:47.719Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"h_id\": 14,\n  \"id_numb\": 2,\n  \"h_hp\": 10,\n  \"h_damage\": 5,\n  \"h_speed\": 2,\n  \"h_defense\": 10\n}",
+      "raw": "{\n  \"h_id\": 210,\n  \"id_numb\": 2,\n  \"h_hp\": 10,\n  \"h_damage\": 5,\n  \"h_speed\": 2,\n  \"h_defense\": 10\n}",
       "form": []
     },
     "tests": []
@@ -215,12 +215,12 @@
     "method": "DELETE",
     "sortNum": 60000,
     "created": "2023-04-19T17:46:09.417Z",
-    "modified": "2023-04-19T21:12:22.714Z",
+    "modified": "2023-04-20T20:53:56.939Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"h_id\":18\n}",
+      "raw": "{\n  \"h_deleted_id\":10\n}",
       "form": []
     },
     "tests": []
@@ -234,12 +234,12 @@
     "method": "DELETE",
     "sortNum": 62500,
     "created": "2023-04-19T17:46:09.418Z",
-    "modified": "2023-04-19T20:48:33.397Z",
+    "modified": "2023-04-20T20:54:02.407Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"h_id\":14\n}",
+      "raw": "{\n  \"h_deleted_id\":14\n}",
       "form": []
     },
     "tests": []
@@ -253,12 +253,12 @@
     "method": "DELETE",
     "sortNum": 65000,
     "created": "2023-04-19T17:46:09.419Z",
-    "modified": "2023-04-19T22:55:53.035Z",
+    "modified": "2023-04-20T20:54:10.083Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"h_id\":18\n}",
+      "raw": "{\n  \"h_deleted_id\":18\n}",
       "form": []
     },
     "tests": []
@@ -338,12 +338,12 @@
     "method": "GET",
     "sortNum": 100000,
     "created": "2023-04-19T17:46:09.424Z",
-    "modified": "2023-04-19T22:05:19.151Z",
+    "modified": "2023-04-20T20:32:08.247Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\":\"Ammamaria\"\n}",
+      "raw": "{\n  \"d_name\":\"Ammamaria\"\n}",
       "form": []
     },
     "tests": []
